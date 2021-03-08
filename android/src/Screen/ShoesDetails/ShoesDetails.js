@@ -4,6 +4,32 @@ import imagePath from "../../Images/imagePath";
 
 
 export default class ShoesDetails extends Component {
+
+    constructor(props){
+        super(props);
+        this.state={
+            addTocartITem:[],
+            itemCount:0,
+            total:0
+        }
+    }
+
+    _addToCart=(selectItem)=>
+  {
+    const {navigation ,} = this.props;
+    let {addTocartITem ,itemCount}=this.state
+    // if(itemCount===0)
+    
+
+        let newCart={...selectItem}
+        addTocartITem={...newCart}
+        console.log(addTocartITem)
+        this.setState({addTocartITem:{...selectItem}})
+        this.setState({itemCount:itemCount+1})
+        navigation.navigate("Latest Deals" , {itemCount:itemCount , addTocartITem:addTocartITem});
+  }
+
+  
     render() {
         const { selectItem } = this.props.route.params;
         return (
@@ -57,7 +83,7 @@ export default class ShoesDetails extends Component {
                         <Text style={styles.wishText}>WISHLIST</Text>
                         
                     </TouchableOpacity>
-                    <TouchableOpacity style={styles.wishlist , styles.btnColor}>
+                    <TouchableOpacity style={styles.wishlist , styles.btnColor} onPress={()=>this._addToCart(selectItem)}>
                     <Image
                         source={imagePath.bag}
                         style={styles.iconbtn}/>
@@ -150,35 +176,35 @@ const styles = StyleSheet.create({
     wishText:{
         color:"gray",
         fontWeight:"bold",
-        fontSize:20,
-        marginTop:10,
-        marginBottom:10,
+        fontSize:15,
+        marginTop:5,
+        marginBottom:5,
         marginLeft:0,
-        marginRight:20
+        marginRight:40
     },
     iconbtn:{
         width: 20,
         height: 20,
-        marginTop:15,
+        marginTop:7,
         marginLeft:20,
-        marginRight:2,
-        
+        marginRight:10,
+        marginBottom:5
     },
     btnColor:{
         backgroundColor:'#F51CB3',
         borderColor: "gray",
         borderWidth: 1,
-        marginLeft:10,
+        marginLeft:8,
         flexDirection:"row"
     },
     wishText1:{
         color:"white",
         fontWeight:"bold",
-        fontSize:20,
-        marginTop:12,
-        marginBottom:10,
-        marginLeft:0,
-        marginRight:20,
+        fontSize:15,
+        marginTop:7,
+        marginBottom:5,
+        marginLeft:10,
+        marginRight:30,
         
     },
 

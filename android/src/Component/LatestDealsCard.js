@@ -15,11 +15,15 @@ import {
 } from 'react-native';
 import navigationStrings from '../constants/navigationStrings';
 // import {Dimensions } from "react-native";
+
+
+
+
 function LatestDealsCard(props) {
     // const{screenWidth} = Dimensions.get('window').width;
-    const { data, Test, item, selectfun, deselectFun, _onNextScrean } = props;
+    const { data, Test, item, selectfun, deselectFun, _onNextScrean , buyNow } = props;
     return (
-        <View>
+        <View style={{flex:1}}>
             <TouchableOpacity onPress={() => _onNextScrean(data.id)} >
                 <View style={styles.card}>
                     <Image
@@ -49,6 +53,13 @@ function LatestDealsCard(props) {
                 </View>
             </TouchableOpacity>
 
+            <View>
+                <TouchableOpacity style={styles.buyNow} onPress={()=>buyNow(data.id)}>
+                        <Text style={styles.buyText}>BUY NOW</Text>
+
+                </TouchableOpacity>
+            </View>
+
         </View>
 
 
@@ -57,7 +68,8 @@ function LatestDealsCard(props) {
 } export default LatestDealsCard;
 const styles = StyleSheet.create({
     card: {
-        marginLeft: 5
+        marginLeft: 5,
+        flex:1
     },
     photo: {
         width: 180,
@@ -91,5 +103,20 @@ const styles = StyleSheet.create({
     },
     offer: {
         color: 'red'
+    },
+    buyNow:{
+        height:30,
+      
+        marginRight:15,
+        marginLeft:5,
+        borderRadius:30,
+        backgroundColor:'#FF3F6D'
+
+    },
+    buyText:{
+        color:'white',
+        fontWeight:'bold',
+        marginLeft:50,
+        marginTop:5
     }
 })

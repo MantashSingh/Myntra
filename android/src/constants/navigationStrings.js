@@ -12,6 +12,8 @@ export default {
     // HOME:'homePage',
     MAIN_PAGE:'homePage',
     SHOES_DETAILS:'shoesDetails',
+    FINAL_CART : 'finalCart',
+    TRACK_ORDER : 'trackOrder'
     
 
 }

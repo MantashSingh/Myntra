@@ -1,5 +1,6 @@
 import React, { Component } from "react"
 import { View, Text, Image, StyleSheet, FlatList } from "react-native"
+import { TouchableOpacity } from "react-native-gesture-handler"
 import BtnComponent from "../../Component/BtnCompoment"
 import LatestDealsCard from "../../Component/LatestDealsCard"
 import navigationStrings from "../../constants/navigationStrings"
@@ -15,128 +16,179 @@ export default class LatestDeals extends Component {
             myData: [
                 {
                     id: 0,
-                    
-                    photo:imagePath.shoe1,
-                    name:"Reebok",
-                    line:"Men Travellar LP Runner",
-                    price1:"2,999",
-                    price2:"3,599",
-                    offer:"30% OFF",
+
+                    photo: imagePath.shoe1,
+                    name: "Reebok",
+                    line: "Men Travellar LP Runner",
+                    price1: 2999,
+                    price2: 3599,
+                    offer: "30% OFF",
+                    quantity:1
 
                 },
                 {
                     id: 1,
-                    photo:imagePath.shoe2,
-                    name:"Reebok",
-                    line:"Men Travellar LP Runner",
-                    price1:"2,999",
-                    price2:"3,599",
-                    offer:"30% OFF",
+                    photo: imagePath.shoe2,
+                    name: "Reebok",
+                    line: "Men Travellar LP Runner",
+                    price1: 2999,
+                    price2: 3599,
+                    offer: "30% OFF",
+                    quantity:1
                 },
                 {
                     id: 2,
-                    photo:imagePath.shoe3,
-                    name:"Reebok",
-                    line:"Men Travellar LP Runner",
-                    price1:"2,999",
-                    price2:"3,599",
-                    offer:"30% OFF",
+                    photo: imagePath.shoe3,
+                    name: "Reebok",
+                    line: "Men Travellar LP Runner",
+                    price1: 2999,
+                    price2: 3599,
+                    offer: "30% OFF",
+                    quantity:1
                 },
                 {
                     id: 3,
-                    photo:imagePath.shoes5,
-                    name:"Reebok",
-                    line:"Men Travellar LP Runner",
-                    price1:"2,999",
-                    price2:"3,599",
-                    offer:"30% OFF",
+                    photo: imagePath.shoes5,
+                    name: "Reebok",
+                    line: "Men Travellar LP Runner",
+                    price1: 2999,
+                    price2: 3599,
+                    offer: "30% OFF",
+                    quantity:1
                 },
                 {
                     id: 4,
-                    photo:imagePath.shoe1,
-                    name:"Reebok",
-                    line:"Men Travellar LP Runner",
-                    price1:"2,999",
-                    price2:"3,599",
-                    offer:"30% OFF",
+                    photo: imagePath.shoe1,
+                    name: "Reebok",
+                    line: "Men Travellar LP Runner",
+                    price1: 2999,
+                    price2: 3599,
+                    offer: "30% OFF",
+                    quantity:1
                 },
                 {
                     id: 5,
-                    
-                    photo:imagePath.shoe1,
-                    name:"Reebok",
-                    line:"Men Travellar LP Runner",
-                    price1:"2,999",
-                    price2:"3,599",
-                    offer:"30% OFF",
+
+                    photo: imagePath.shoe1,
+                    name: "Reebok",
+                    line: "Men Travellar LP Runner",
+                    price1: 2999,
+                    price2: 3599,
+                    offer: "30% OFF",
+                    quantity:1
 
                 },
                 {
                     id: 6,
-                    photo:imagePath.shoe2,
-                    name:"Reebok",
-                    line:"Men Travellar LP Runner",
-                    price1:"2,999",
-                    price2:"3,599",
-                    offer:"30% OFF",
+                    photo: imagePath.shoe2,
+                    name: "Reebok",
+                    line: "Men Travellar LP Runner",
+                    price1: 2999,
+                    price2: 3599,
+                    offer: "30% OFF",
+                    quantity:1
                 },
                 {
                     id: 7,
-                    photo:imagePath.shoe3,
-                    name:"Reebok",
-                    line:"Men Travellar LP Runner",
-                    price1:"2,999",
-                    price2:"3,599",
-                    offer:"30% OFF",
+                    photo: imagePath.shoe3,
+                    name: "Reebok",
+                    line: "Men Travellar LP Runner",
+                    price1: 2999,
+                    price2: 3599,
+                    offer: "30% OFF",
+                    quantity:1
                 },
                 {
                     id: 8,
-                    photo:imagePath.shoes5,
-                    name:"Reebok",
-                    line:"Men Travellar LP Runner",
-                    price1:"2,999",
-                    price2:"3,599",
-                    offer:"30% OFF",
+                    photo: imagePath.shoes5,
+                    name: "Reebok",
+                    line: "Men Travellar LP Runner",
+                    price1: 2999,
+                    price2: 3599,
+                    offer: "30% OFF",
+                    quantity:1
                 },
                 {
                     id: 9,
-                    photo:imagePath.shoe1,
-                    name:"Reebok",
-                    line:"Men Travellar LP Runner",
-                    price1:"2,999",
-                    price2:"3,599",
-                    offer:"30% OFF",
+                    photo: imagePath.shoe1,
+                    name: "Reebok",
+                    line: "Men Travellar LP Runner",
+                    price1: 2999,
+                    price2: 3599,
+                    offer: "30% OFF",
+                    quantity:1
                 },
                 {
                     id: 10,
-                    photo:imagePath.shoe1,
-                    name:"Reebok",
-                    line:"Men Travellar LP Runner",
-                    price1:"2,999",
-                    price2:"3,599",
-                    offer:"30% OFF",
+                    photo: imagePath.shoe1,
+                    name: "Reebok",
+                    line: "Men Travellar LP Runner",
+                    price1: 2999,
+                    price2: 3599,
+                    offer: "30% OFF",
+                    quantity:1
                 },
-            ]
+            ],
 
-
+            itemCount: 0,
+            addTocartITem: []
 
 
         }
     }
 
 
-    _onNextScrean=(id)=>{
+    _onNextScrean = (id) => {
         //   console.log(id)
-    const {navigation}=this.props
-    const {myData}=this.state
-    let newArray=[...myData]
-    // alert(JSON.stringify(newArray[id]))
-    navigation.navigate(navigationStrings.SHOES_DETAILS,{selectItem:newArray[id]});
-    // alert(selectItem)
+        const { navigation } = this.props
+        const { myData } = this.state
+        let newArray = [...myData]
+        // alert(JSON.stringify(newArray[id]))
+        navigation.navigate(navigationStrings.SHOES_DETAILS, { selectItem: newArray[id] });
+        // alert(selectItem)
+    }
+
+
+    buyNow = (id) => {
+        let { itemCount, addTocartITem, myData } = this.state
+        let newArray = [...myData];
+        let index = newArray.findIndex((item) => item.id == id);
+        if (!addTocartITem.includes(newArray[index])) {
+            let finalArray = [...addTocartITem, newArray[index]];
+            this.setState({
+                itemCount: itemCount + 1,
+                addTocartITem: finalArray
+            })
+        }
+    }
+
+
+    OpenFinalCart=(id)=>{
+        const { navigation } = this.props
+        const { myData ,addTocartITem ,itemCount} = this.state
+        let newArray = [...myData]
+        navigation.navigate(navigationStrings.FINAL_CART, { addTocartITem:addTocartITem , itemCount:itemCount });
+
+    }
+
+    componentDidMount() {
+        const {navigation} = this.props;
+        // let {addTocartITem}=this.this
+        this.focusListener = this.props.navigation.addListener('focus', () => {
+            // alert("sdcjhsdfc")
+            if(this.props.route.params)
+            {
+
+                // alert("sdcjhsdfc")
+                let test=this.props.route.params.addTocartITem
+                this.buyNow(test.id)
+                this.props.route.params=null
+            }
+        });
       }
     render() {
-        const{navigation} = this.props;
-        const { myData } = this.state;
+        const { navigation } = this.props;
+        const { myData, buyNOw } = this.state;
         return (
 
             <View>
@@ -149,11 +201,16 @@ export default class LatestDeals extends Component {
                     <Image style={styles.icon}
                         source={imagePath.heart}
                     />
-                    <Image style={styles.icon}
-                        source={imagePath.cart}
-                    />
+                    <TouchableOpacity  onPress={()=>this.OpenFinalCart()}>
+                    <View style={styles.cartRelative}>
+                        <View style={styles.countAbsolute}><Text>{this.state.itemCount}</Text></View>
+                        <Image style={styles.icon}
+                            source={imagePath.cart}
+                        />
+                    </View>
+                    </TouchableOpacity>
                 </View>
-
+              
 
                 <Text style={styles.items}>xxxx Items</Text>
 
@@ -174,52 +231,63 @@ export default class LatestDeals extends Component {
                             numColumns={2}
                             keyExtractor={(item) => item.id}
                             ItemSeparatorComponent={() => <View style={{ marginBottom: 10 }} />}
-                            renderItem={({ item }) => <LatestDealsCard data={item} _onNextScrean={this._onNextScrean} />}
+                            renderItem={({ item }) => <LatestDealsCard data={item} _onNextScrean={this._onNextScrean} buyNow={this.buyNow} />}
                         />
                     </View>
 
                 </View>
-                </View>
+            </View>
 
         )
     }
 }
 
 const styles = StyleSheet.create({
-                    rowDirection: {
-                    flexDirection: "row",
+    rowDirection: {
+        flexDirection: "row",
         marginTop: 10
 
     },
     icon: {
-                    width: 30,
+        width: 30,
         height: 30,
         marginRight: 10,
     },
     footware: {
-                    fontSize: 20,
+        fontSize: 20,
         fontWeight: "bold",
         marginLeft: 30,
         marginRight: 100
 
     },
     items: {
-                    marginTop: -10,
+        marginTop: -10,
         marginLeft: 45,
         color: "gray"
 
     },
     footwareImg: {
-                    width: 350,
+        width: 350,
         height: 50,
         marginTop: 20,
         marginLeft: 5
     },
     shoes: {
-                    width: 170,
+        width: 170,
         height: 200,
         marginRight: 8,
         marginLeft: 5
+    },
+    cartRelative: {
+        position:"relative",
+
+    },
+    countAbsolute:{
+        position:"absolute",
+        left:15,
+        top:2
+
     }
+
 
 })

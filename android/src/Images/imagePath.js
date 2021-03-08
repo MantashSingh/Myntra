@@ -36,6 +36,23 @@ export default{
     shoes5:require('./shoes5.jpg'),
 
     share:require('./share.png'),
-    bag:require('./bag.png')
+    bag:require('./bag.png'),
+    sale2:require('./sale.png'),
+    cartBottom:require('./cartBottom.png'),
+    user:require('./user.png'),
+    tv:require('./tv.png'),
+
+
+    call :require('./call.png'),
+    mail:require('./mail.png'),
+    location:require('./location.png'),
+
+
+    profile:require("./profile.png"),
+    box:require("./box.png"),
+    next:require("./next.png"),
+    support:require("./support.png"),
+    shareWhite:require("./shareWhite.png")
+
 
 }
