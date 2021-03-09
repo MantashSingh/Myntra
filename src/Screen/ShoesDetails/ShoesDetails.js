@@ -1,6 +1,6 @@
 import React, { Component } from "react"
 import { View, Text, Image, StyleSheet, TouchableOpacity } from "react-native"
-import imagePath from "../../Images/imagePath";
+import imagePath from "../../assets/images/imagePath";
 
 
 export default class ShoesDetails extends Component {

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Text, View, StyleSheet, ScrollView } from 'react-native';
-import imagePath from "../../Images/imagePath";
+import imagePath from "../../assets/images/imagePath";
 import TextInputComponent from "../../Component/TextInputComponent";
 import BtnComponent from '../../Component/BtnCompoment';
 

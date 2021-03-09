@@ -4,7 +4,7 @@ import { TouchableOpacity } from "react-native-gesture-handler"
 import BtnComponent from "../../Component/BtnCompoment"
 import LatestDealsCard from "../../Component/LatestDealsCard"
 import navigationStrings from "../../constants/navigationStrings"
-import imagePath from "../../Images/imagePath"
+import imagePath from "../../assets/images/imagePath"
 
 
 

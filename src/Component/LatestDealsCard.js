@@ -1,5 +1,5 @@
 import React from 'react';
-import imagePath from '../Images/imagePath';
+import imagePath from '../assets/images/imagePath';
 
 
 

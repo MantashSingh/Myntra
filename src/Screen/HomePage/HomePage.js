@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 import { View, Text, Image, StyleSheet, Modal, ScrollView } from 'react-native'
 
 import TopHeader from '../../Component/TopHeader'
-import imagePath from '../../Images/imagePath'
+import imagePath from '../../assets/images/imagePath'
 
 
 export default class HomePage extends Component {

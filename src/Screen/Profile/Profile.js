@@ -1,7 +1,7 @@
 import React, { Component } from "react"
 import { View, Text, StyleSheet, Image, Modal } from "react-native"
 import { TouchableOpacity } from "react-native-gesture-handler"
-import imagePath from "../../Images/imagePath"
+import imagePath from "../../assets/images/imagePath"
 import * as ImagePicker from 'react-native-image-picker';
 import ProfileCard from "../../Component/ProfileCard";
 

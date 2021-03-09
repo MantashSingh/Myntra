@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import { Text, View ,StyleSheet, Image } from 'react-native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import {Cart, HomePage, Profile, LatestDeals} from "../Screen/index"
-import imagePath from '../Images/imagePath';
+import imagePath from '../assets/images/imagePath';
 
 
 const Tab = createBottomTabNavigator();

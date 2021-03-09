@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Text, TouchableOpacity, View, Image, StyleSheet } from "react-native";
-import imagePath from "../../Images/imagePath";
+import imagePath from "../../assets/images/imagePath"
 import BtnComponent from '../../Component/BtnCompoment';
 
 export default class Login extends Component {

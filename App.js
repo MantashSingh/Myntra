@@ -1,6 +1,6 @@
 import React , {Component} from 'react';
 import { Text } from 'react-native';
-import Routes from './android/src/Navigation/Routes';
+import Routes from "./src/Navigation/Routes";
 
 
 

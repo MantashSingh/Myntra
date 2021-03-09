@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { View, StyleSheet } from 'react-native'
-import imagePath from '../Images/imagePath'
+import imagePath from '../assets/images/imagePath'
 import HeaderTouch from '../Component/HeaderTouch'
 
 

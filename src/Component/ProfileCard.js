@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import {  Text, View ,StyleSheet ,Image } from "react-native";
-import imagePath from "../Images/imagePath";
+import imagePath from "../assets/images/imagePath";
 
 
 

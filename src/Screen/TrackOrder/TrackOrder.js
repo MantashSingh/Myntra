@@ -1,7 +1,7 @@
 import React , {Component} from 'react';
 import { Text, View ,StyleSheet ,Linking ,Image ,Share} from 'react-native';
 import { TouchableOpacity } from 'react-native-gesture-handler';
-import imagePath from '../../Images/imagePath';
+import imagePath from '../../assets/images/imagePath';
 import openMap from 'react-native-open-maps';
 
 
